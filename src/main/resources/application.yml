@@ -1,0 +1,30 @@
+# Conversion to YAML from Properties formar report
+# Warnings:
+# - The yaml file had comments which are lost in the refactoring!
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://ep-lucky-bird-a17ltdhj-pooler.ap-southeast-1.aws.neon.tech/neondb?user=neondb_owner&password=npg_zWSTrRhNl2y6&sslmode=require&channelBinding=require
+    username: neondb_owner
+    password: npg_zWSTrRhNl2y6
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+  jackson:
+    mapper:
+      ACCEPT_CASE_INSENSITIVE_ENUMS: 'true '
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+  version: 2.6.7
+  api-docs:
+    enabled: true
