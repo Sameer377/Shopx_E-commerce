@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: S
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: spring.datasource.url
+        value: jdbc:mysql://<your-db-host>:3306/<your-db-name>
+      - key: spring.datasource.username
+        value: your-db-user
+      - key: spring.datasource.password
+        value: your-db-pass
+      - key: server.port
+        value: 8080
