@@ -25,7 +25,6 @@ import com.masai.service.ProductService;
 
 import io.swagger.v3.oas.models.security.SecurityScheme.In;
 
-@CrossOrigin
 @RestController
 public class ProductController {
 

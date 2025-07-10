@@ -25,7 +25,6 @@ import com.masai.models.Order;
 import com.masai.models.SessionDTO;
 import com.masai.service.CustomerService;
 
-@CrossOrigin
 
 @RestController
 public class CustomerController {

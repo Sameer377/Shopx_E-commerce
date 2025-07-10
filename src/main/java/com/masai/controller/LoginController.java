@@ -20,7 +20,6 @@ import com.masai.service.CustomerService;
 import com.masai.service.LoginLogoutService;
 import com.masai.service.SellerService;
 
-@CrossOrigin
 @RestController
 public class LoginController {
 	

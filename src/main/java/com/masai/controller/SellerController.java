@@ -23,7 +23,6 @@ import com.masai.models.SellerDTO;
 import com.masai.models.SessionDTO;
 import com.masai.service.SellerService;
 
-@CrossOrigin
 @RestController
 public class SellerController {
 	

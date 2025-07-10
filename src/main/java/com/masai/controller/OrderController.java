@@ -26,7 +26,6 @@ import com.masai.models.OrderDTO;
 import com.masai.repository.OrderDao;
 import com.masai.service.OrderService;
 
-@CrossOrigin
 @RestController
 public class OrderController {
 	@Autowired

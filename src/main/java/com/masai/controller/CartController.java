@@ -20,7 +20,6 @@ import com.masai.repository.CartDao;
 import com.masai.repository.CustomerDao;
 import com.masai.service.CartService;
 
-@CrossOrigin
 @RestController
 public class CartController {
 
