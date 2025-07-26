@@ -14,7 +14,7 @@
 * Spring Boot
 * Spring Data JPA
 * Hibernate
-* MySQL
+* PostgreSQL
 
 ## Modules
 
@@ -49,9 +49,9 @@
 * Update the port number, username and password as per your local database config.
 
 ```
-    server.port=8009
+    server.port=8080
 
-    spring.datasource.url=jdbc:mysql://localhost:3306/ecommercedb
+    spring.datasource.url=jdbc:mysql://localhost:8080/ecommercedb
     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
     spring.datasource.username=root
     spring.datasource.password=root
@@ -60,9 +60,9 @@
 
 ## API Root Endpoint
 
-`https://localhost:8009/`
+`https://localhost:8080/`
 
-`http://localhost:8009/swagger-ui/index.html#/`
+`http://localhost:8080/swagger-ui/index.html#/`
 
 
 ## API Module Endpoints
@@ -135,14 +135,14 @@
 
 ### Sample API Response for Customer Login
 
-`POST   localhost:8009/login/customer`
+`POST   localhost:8080/login/customer`
 
 * Request Body
 
 ```
     {
         "mobileId": "9999999999",
-        "password": "shyam123456"
+        "password": "sam123456"
     }
 ```
 
