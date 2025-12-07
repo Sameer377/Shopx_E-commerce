@@ -2,6 +2,7 @@ package com.masai.controller;
 
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,6 +34,8 @@ public class CartController {
 	private CustomerDao customerDao;
 	
 
+
+    @Operation(summary = "add item to card")
 	@PostMapping(value = "/cart/add")
 	public ResponseEntity<Cart> addProductToCartHander(@RequestBody CartDTO cartdto ,@RequestHeader("token")String token){
 		

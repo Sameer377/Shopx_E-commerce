@@ -2,7 +2,7 @@
 # Warnings:
 # - The yaml file had comments which are lost in the refactoring!
 server:
-  port: 8080
+  port: 9000
 spring:
   datasource:
     url: jdbc:postgresql://ep-lucky-bird-a17ltdhj-pooler.ap-southeast-1.aws.neon.tech/neondb?user=neondb_owner&password=npg_zWSTrRhNl2y6&sslmode=require&channelBinding=require
