@@ -24,44 +24,38 @@ import com.masai.service.CartService;
 @RestController
 public class CartController {
 
-	@Autowired
-	private CartService cartService;
-	
-	@Autowired
-	private CartDao cartDao;
-	
-	@Autowired
-	private CustomerDao customerDao;
-	
+    @Autowired
+    private CartService cartService;
 
+    @Autowired
+    private CartDao cartDao;
 
-    @Operation(summary = "add item to card")
-	@PostMapping(value = "/cart/add")
-	public ResponseEntity<Cart> addProductToCartHander(@RequestBody CartDTO cartdto ,@RequestHeader("token")String token){
-		
-		Cart cart = cartService.addProductToCart(cartdto, token);
-		return new ResponseEntity<Cart>(cart,HttpStatus.CREATED);
-	}
-	
-//	
-	@GetMapping(value = "/cart")
-	public ResponseEntity<Cart> getCartProductHandler(@RequestHeader("token")String token){
-		return new ResponseEntity<>(cartService.getCartProduct(token), HttpStatus.ACCEPTED);
-	}
-	
-	
-	@DeleteMapping(value = "/cart")
-	public ResponseEntity<Cart> removeProductFromCartHander(@RequestBody CartDTO cartdto ,@RequestHeader("token")String token){
-		
-		Cart cart = cartService.removeProductFromCart(cartdto, token);
-		return new ResponseEntity<Cart>(cart,HttpStatus.OK);
-	}
-	
-	
-	@DeleteMapping(value = "/cart/clear")
-	public ResponseEntity<Cart> clearCartHandler(@RequestHeader("token") String token){
-		return new ResponseEntity<>(cartService.clearCart(token), HttpStatus.ACCEPTED);
-	}
-	
-	
+    @Autowired
+    private CustomerDao customerDao;
+
+    @Operation(summary = "Add product to cart", description = "Adds a product to the customer's cart using productId and quantity.")
+    @PostMapping(value = "/cart/add")
+    public ResponseEntity<Cart> addProductToCartHandler(@RequestBody CartDTO cartdto, @RequestHeader("token") String token) {
+        Cart cart = cartService.addProductToCart(cartdto, token);
+        return new ResponseEntity<>(cart, HttpStatus.CREATED);
+    }
+
+    @Operation(summary = "View cart", description = "Fetches all items currently in the user's cart.")
+    @GetMapping(value = "/cart")
+    public ResponseEntity<Cart> getCartProductHandler(@RequestHeader("token") String token) {
+        return new ResponseEntity<>(cartService.getCartProduct(token), HttpStatus.ACCEPTED);
+    }
+
+    @Operation(summary = "Remove product from cart", description = "Removes a specific product from the user's cart.")
+    @DeleteMapping(value = "/cart")
+    public ResponseEntity<Cart> removeProductFromCartHandler(@RequestBody CartDTO cartdto, @RequestHeader("token") String token) {
+        Cart cart = cartService.removeProductFromCart(cartdto, token);
+        return new ResponseEntity<>(cart, HttpStatus.OK);
+    }
+
+    @Operation(summary = "Clear cart", description = "Removes all items from the user's cart.")
+    @DeleteMapping(value = "/cart/clear")
+    public ResponseEntity<Cart> clearCartHandler(@RequestHeader("token") String token) {
+        return new ResponseEntity<>(cartService.clearCart(token), HttpStatus.ACCEPTED);
+    }
 }
