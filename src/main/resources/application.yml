@@ -23,7 +23,7 @@ spring:
       ACCEPT_CASE_INSENSITIVE_ENUMS: 'true '
 springdoc:
   swagger-ui:
-    path: /swagger-ui/index.html
+    path: /swagger-ui
     enabled: true
   version: 2.6.7
   api-docs:
