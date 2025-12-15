@@ -35,7 +35,7 @@ public OpenAPI customOpenAPI(@Value("${springdoc.version}") String appVersion) {
                     "CRUD operations for all entities with real-time testing via Swagger UI.\n" +
                     "Built using Spring Boot, Spring Data JPA, Hibernate, and PostgreSQL.\n"+
 					"\n \t-Created by Sameer Shaikh"+
-					"\n \t-Tech stack : Code Java(Streams, JWT, MVC, JPA), PostgreSQL, AWS EC2, Github Actions (CI/CD)"
+					"\n \t-Tech stack : Code Java(Streams, JWT, MVC, JPA), Spring Boot, PostgreSQL, AWS EC2, Github Actions (CI/CD)"
             )
             );
 }
