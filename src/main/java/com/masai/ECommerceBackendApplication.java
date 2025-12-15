@@ -32,10 +32,10 @@ public OpenAPI customOpenAPI(@Value("${springdoc.version}") String appVersion) {
                     "Secure and scalable REST API services built for a e-commerce platform.\n" +
                     "Includes modules for Customer, Seller, Product, Cart, and Order management.\n" +
                     "Session-based authentication system with 1-hour validity for both customers and sellers.\n" +
-                    "CRUD operations for all entities with real-time testing via Swagger UI.\n" +
+                    "Rest apis for all entities with real-time testing via Swagger UI.\n" +
                     "Built using Spring Boot, Spring Data JPA, Hibernate, and PostgreSQL.\n"+
 					"\n \t-Created by Sameer Shaikh"+
-					"\n \t-Tech stack : Code Java(Streams, JWT, MVC, JPA), Spring Boot, PostgreSQL, AWS EC2, Github Actions (CI/CD)"
+					"\n \t-Tech stack : Code Java (Streams, Exceptions, Builder, Generics), JWT Authentication, Spring Boot(MVC, Security, JPA/Hibernate), PostgreSQL, AWS EC2, Github Actions (CI/CD)"
             )
             );
 }
