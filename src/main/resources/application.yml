@@ -23,8 +23,8 @@ spring:
       ACCEPT_CASE_INSENSITIVE_ENUMS: 'true '
 springdoc:
   swagger-ui:
-    path: /swagger-ui
     enabled: true
   version: 2.6.7
   api-docs:
     enabled: true
+  url: http://shopx-ecommerce.duckdns.org
