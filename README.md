@@ -1,7 +1,15 @@
-# REST API for an E-Commerce Application
+# E-Commerce Application
 
-* I developed this REST API for an e-commerce application. This API performs all the fundamental CRUD operations of any e-commerce platform with user validation at every step. 
+• Built end-to-end e-commerce workflows, integrating secure seller/admin MVC structure ensuring SOLID principles with
+customer-facing features for browsing, cart, and order management.
+• Integrated CI/CD pipeline and deployed 20+ RESTful services using Spring Boot, JPA, Security and on PostgreSQL
+AWS EC2 by containerizing with Docker. Added authentication, Redis based rate limiting, and Microservices.
+• Implemented robust session-based security, issuing 1-hour tokens using JWT authentication .
 
+Live link : [Open in new tab](http://shopx-ecommerce.duckdns.org/swagger-ui/index.html)
+
+## Live swagger
+![E-R Diagram](./live.png?raw=true)
 
 ## E-R Diagram for the application
 
